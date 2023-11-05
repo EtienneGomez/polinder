@@ -62,7 +62,7 @@ export default {
       bodyFormData.append('password', this.password); 
       axios({
           method: "post",
-          url: "http://localhost/BackEnd.php",
+          url: "https://backendipn1.azurewebsites.net/BackEnd.php",
           data: bodyFormData,
           headers: { "Content-Type": "multipart/form-data" },
         })
