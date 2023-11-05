@@ -153,7 +153,7 @@ export default {
       // Realizar la solicitud HTTP utilizando Axios
       axios({
         method: "post",
-        url: "http://localhost/registro.php",
+        url: "https://backendipn1.azurewebsites.net/registro.php",
         data: bodyFormData,
         headers: { "Content-Type": "multipart/form-data" },
       })
