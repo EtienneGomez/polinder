@@ -131,7 +131,7 @@ created() {
    bodyFormData.append('escuela', "Escuela Nacional de Biblioteconomía y Archivonomía"); 
 
     //Peticion POST para los usuarios registrados en las escuelas
-   axios.post('http://localhost/EscuelasUsuarios.php', bodyFormData)
+   axios.post('https://backendipn1.azurewebsites.net/EscuelasUsuarios.php', bodyFormData)
    .then(response => {
       //Asigna los datos del usuario a las variables del componente
      this.results = response.data;
@@ -145,7 +145,7 @@ created() {
     bodyFormData.append('id', window.localStorage.getItem("IdUsuario")); 
   
    //Peticion POST para el header
-    axios.post('http://localhost/BackEnd.php', bodyFormData)
+    axios.post('https://backendipn1.azurewebsites.net/BackEnd.php', bodyFormData)
     .then(response => {
       // Asigna los datos del usuario a las variables del componente
       this.usuarios.nombre = response.data.nombre;

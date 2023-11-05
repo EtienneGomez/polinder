@@ -303,7 +303,7 @@ export default {
     var bodyFormData = new FormData();
     bodyFormData.append('id', window.localStorage.getItem("IdUsuario")); 
 
-    axios.post('http://localhost/BackEnd.php', bodyFormData)
+    axios.post('https://backendipn1.azurewebsites.net/BackEnd.php', bodyFormData)
     .then(response => {
       // Asigna los datos del usuario a las variables del componente
       this.usuarios.nombre = response.data.nombre;
