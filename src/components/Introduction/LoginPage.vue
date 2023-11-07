@@ -56,30 +56,31 @@ export default {
   methods: {
     login(event) {
       event.preventDefault();
-      // Realizar la solicitud de inicio de sesión utilizando Axios
-      var bodyFormData = new FormData();
-      bodyFormData.append('email', this.email); 
-      bodyFormData.append('password', this.password); 
-      axios({
-          method: "post",
-          url: "https://backendipn1.azurewebsites.net/BackEnd.php",
-          data: bodyFormData,
-          headers: { "Content-Type": "multipart/form-data" },
-        })
-        .then(response => {
-          window.localStorage.setItem("IdUsuario", response.data.id);
-          // Aquí puedes manejar la respuesta del servidor después de iniciar sesión correctamente
-          console.log(response.data);
-          // Redirigir a otro componente usando Vue Router
-          this.$router.push("/lobby-two");
-        })
-        .catch(error => {
-          // Aquí puedes manejar los errores que ocurran durante el inicio de sesión
-          // Por ejemplo, mostrar un mensaje de error al usuario
-          console.error(error);
-          this.showErrorDialog = true;
-          //alert("Error al iniciar sesión. Por favor, Asegurece que poner su correo y contrasena correctamente.");
-        });
+      this.$router.push("/lobby-two");
+        // // Realizar la solicitud de inicio de sesión utilizando Axios
+        // var bodyFormData = new FormData();
+        // bodyFormData.append('email', this.email); 
+        // bodyFormData.append('password', this.password); 
+        // axios({
+        //     method: "post",
+        //     url: "https://backendipn1.azurewebsites.net/BackEnd.php",
+        //     data: bodyFormData,
+        //     headers: { "Content-Type": "multipart/form-data" },
+        //   })
+        //   .then(response => {
+        //     window.localStorage.setItem("IdUsuario", response.data.id);
+        //     // Aquí puedes manejar la respuesta del servidor después de iniciar sesión correctamente
+        //     console.log(response.data);
+        //     // Redirigir a otro componente usando Vue Router
+        //     this.$router.push("/lobby-two");
+        //   })
+        //   .catch(error => {
+        //     // Aquí puedes manejar los errores que ocurran durante el inicio de sesión
+        //     // Por ejemplo, mostrar un mensaje de error al usuario
+        //     console.error(error);
+        //     this.showErrorDialog = true;
+        //     //alert("Error al iniciar sesión. Por favor, Asegurece que poner su correo y contrasena correctamente.");
+        //   });
     },
   },
 };
