@@ -17,7 +17,7 @@
     <li>{{ usuarios.nombre }}</li>
     <li><div class="avatar">
       <!-- Avatar image -->
-      <img class="avatar__image" :src="require(`../../media/${usuarios.imagen}`)" />
+      <img class="avatar__image" :src="(`../../media/${usuarios.imagen}`)" />
       </div>
     </li>
   

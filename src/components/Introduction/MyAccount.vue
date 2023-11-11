@@ -16,7 +16,7 @@
       <li>{{ usuarios.nombre }}</li>
       <li><div class="avatar">
         <!-- Avatar image -->
-        <img class="avatar__image" :src="require(`../../media/${usuarios.imagen}`)" />
+        <img class="avatar__image" :src="(`../../media/mora.jpg`)" />
         </div>
       </li>
     
@@ -34,7 +34,7 @@
     
       <div class="center row margin-top max-width-l center">
         <div class="col-one-half card card-content">
-          <p class="paragraph"><img :src="require(`../../media/${usuarios.imagen}`)"></p>
+          <p class="paragraph"><img src="../../media/usuario.png"></p>
           <h5>Nombre:</h5><p class="muted">{{ usuarios.nombre }}</p>
           <h5>Apellidos:</h5><p class="muted">{{ usuarios.apellido }}</p>
           <h5>Boleta:</h5><p class="muted">{{ usuarios.boleta }}</p>

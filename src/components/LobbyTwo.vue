@@ -17,7 +17,7 @@
     <li>{{ usuarios.nombre }}</li>
     <li><div class="avatar"> 
       <!-- Avatar image -->
-      <img class="avatar__image"  :src="require(`../media/${usuarios.imagen}`)"/>
+      <img src="../media/usuario.png">
       </div>
     </li>
   </ul>
@@ -84,7 +84,7 @@
   </div>
  
   <div class="col-one-second">
-    <center><h4 Center>Estas personas podrian interesarte, ¡¡Estudian en tu misma escuela!!</h4></center>
+    <center><h4 Center>¡¡Tienes los siguientes match, estas personas quieren darte materias!!</h4></center>
 <div class="center row margin-top max-width-l" right>
 
       <div class="col-one-third card card-content" v-for="escuela in escuelas" :key="escuela.id">
@@ -94,11 +94,11 @@
             :plan_relacion="escuela.plan_relacion" 
             :telefono="escuela.telefono" 
             :imagen="escuela.imagen">
-          <p class="paragraph"><img :src="require(`../media/${escuela.imagen}`)"></p>
+          <p class="paragraph"><img src="../media/usuario.png"></p>
           <p style="color: black;">Nombre: {{ escuela.nombre }}</p>
           <p style="color: black;">Apellido: {{ escuela.apellidos }}</p>
           <p style="color: black;">Descripción: {{ escuela.descripcion }}</p>
-          <p style="color: black;">Plan de relación: {{ escuela.plan_relacion }}</p>
+          <p style="color: black;">Materias que no quiere: {{ escuela.plan_relacion }}</p>
           
           <a :href="'https://wa.me/' + escuela.telefono" target="_blank" class="social-margin">
             <div class="social-icon facebook">
